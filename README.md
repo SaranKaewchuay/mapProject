@@ -15,6 +15,16 @@ Package for this project
    import { customStyleMap } from '../Styles/Map';
 ```
 # Use Google Map API And Current Location
+## For Android you only have to update 
+### android/app/src/main/AndroidManifest.xml file.
+```js
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <meta-data
+      android:name="com.google.android.geo.API_KEY"
+      android:value="Your API KEY"
+    />
+```
 ## create state
 ```js
 const [location, setLocation] = useState(null);
