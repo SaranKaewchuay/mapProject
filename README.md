@@ -15,6 +15,28 @@ Package for this project
    import { customStyleMap } from '../Styles/Map';
 ```
 # Use Google Map API And Current Location
+## Config in android/app/src/main/AndroidManifest.xml file.
+```js
+   <meta-data
+     android:name="com.google.android.geo.API_KEY"
+     android:value="Your Google maps API Key Here"/>
+   <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+```
+## Map Views
+```js
+   enableLatestRenderer();
+
+  <MapView
+    initialRegion={{
+      latitude: 37.78825,
+      longitude: -122.4324,
+      latitudeDelta: 0.0922,
+      longitudeDelta: 0.0421,
+    }}
+  />
+  
+ ```
 ## create state
 ```js
 const [location, setLocation] = useState(null);
